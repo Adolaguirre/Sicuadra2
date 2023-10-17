@@ -46,16 +46,7 @@ button:hover{
 header{
     background-color: rgb(245,245,245);
 }
-/*
-header .logo{
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    color: rgb(0, 174, 255);
-    font-size: 1.6em;
-}
-*/
-
+ 
 header .logotipo{
         margin: 0;
         padding: 15px 20px;
