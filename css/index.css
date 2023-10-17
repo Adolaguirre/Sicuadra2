@@ -272,6 +272,7 @@ footer .container{
     #nuestros-estilos .programas{
         display: flex;
         justify-content: center;
+        /* modificar */
     }
 
     #nuestros-estilos p{
