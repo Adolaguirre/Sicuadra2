@@ -104,3 +104,15 @@ footer .container{
     justify-content: center;
     align-items: flex-end;  
 }
+
+/* Flexbox */
+
+.container
+{display: flex;
+width:100%;
+justify-content: space-between;
+}
+
+.item-1,.item-2,.item-3,.item.4,.item-5
+{width: 100px;
+}
