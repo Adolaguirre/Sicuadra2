@@ -1,4 +1,7 @@
 16/10
 Miguel
 
-Hay que cambiar el archivo css que esta en la carpeta measure que solo es para html
+1) Hay que cambiar el archivo css que esta en la carpeta measure que solo es para html
+
+2) Tuve que borrar la carpeta "measure" por que no me dejaba vincular las imagenes ni
+los enlaces
