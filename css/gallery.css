@@ -109,10 +109,21 @@ footer .container{
 
 .container
 {display: flex;
-width:100%;
+flex-direction: row;
 justify-content: space-between;
 }
 
-.item-1,.item-2,.item-3,.item.4,.item-5
-{width: 100px;
-}
+.item-1
+{background-color: grey;}
+
+.item-2
+{background-color: grey;}
+
+.item-3
+{background-color: grey;}
+
+.item-4
+{background-color: grey;}
+
+.item-5
+{background-color: grey;}
