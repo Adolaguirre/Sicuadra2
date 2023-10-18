@@ -116,4 +116,27 @@ justify-content: space-between;
 .item-1,.item-2,.item-3,.item-4,.item-5
 {background-color: grey;
 border:2px solid black;
-margin:5px }
+margin:5px;
+}
+
+/* No me salio aplicar el hover agrupando los elementos */
+
+.item-1:hover{
+transform: scale(1.4,1.4);
+transition: transform 0.3s ease-in-out;}
+
+.item-2:hover{
+transform: scale(1.4,1.4);
+transition: transform 0.3s ease-in-out;} 
+
+.item-3:hover{
+transform: scale(1.4,1.4);
+transition: transform 0.3s ease-in-out;} 
+
+.item-4:hover{
+transform: scale(1.4,1.4);
+transition: transform 0.3s ease-in-out;} 
+
+.item-5:hover{
+transform: scale(1.4,1.4);
+transition: transform 0.3s ease-in-out;} 
