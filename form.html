@@ -18,7 +18,7 @@
 
     <!--formulario -->
 
-    <div class="container mt-5">
+    <div class="container mb-4 mt-4">
         <h1>Encargue su cuadro personalizado</h1>
         <form id="myForm">
           <div class="form-group">
@@ -33,6 +33,14 @@
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
           </div>
+          <div class="form-group">
+            <label for="direccion">Dirección</label>
+            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su Dirección">
+          </div>
+            <div class="form-group col-6 row">
+            <label for="CodigoPostal">Codigo Postal</label>
+            <input type="text" class="form-control" id="CodigoPostal" placeholder="Ingrese su codigo postal">
+          </div>        
           <div class="form-group">
             <p>Orientación del cuadro:</p>          
             <div class="form-check form-check-inline">
@@ -121,6 +129,26 @@
         });
       </script>
 
+<script>
+
+  // Agregar un evento para verificar la extensión del archivo cuando se envía el formulario
+document.getElementById('myForm').addEventListener('submit', function(event) {
+const file = document.getElementById('imagen');
+const selectedFile = file.files[0];
+
+if (selectedFile) {
+ const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i; // Extensiones permitidas
+
+ if (!allowedExtensions.exec(selectedFile.name)) {
+   // Archivo no es una imagen permitida
+   alert('Por favor, selecciona un archivo de imagen válido (JPEG, JPG, PNG o GIF).');
+   event.preventDefault(); // Evitar que se envíe el formulario
+ }
+}
+});
+
+</script>
+
       <!--Script para que al apretar el boton borrar todo se borre todo lo seleccionado o escrito-->
     <script>
     function reiniciarFormulario() {
@@ -136,7 +164,7 @@
 
     <footer>
         <div class="container">
-            <p>Buscanos también en nuestras redes<p><br>
+            <p>Buscanos también en nuestras redes<p>
             <p>   
             <a href="https://www.facebook.com/profile.php?id=100064683802020" target="_blank" title="Nuestra página oficial de Facebook">
             <img src="images/facebook_icon.svg" alt="Icono Facebook" width="30" height="30">
