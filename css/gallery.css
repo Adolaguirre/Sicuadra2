@@ -119,7 +119,7 @@ border:2px solid black;
 margin:5px;
 }
 
-/* No me salio aplicar el hover agrupando los elementos */
+/* No me salio aplicar el hover agrupando todos los items */
 
 .item-1:hover{
 transform: scale(1.4,1.4);
