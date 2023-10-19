@@ -17,47 +17,47 @@
         </nav>
     </div>
 
-    <!--formulario --> 123123123
+    <!--formulario -->
 
     <div class="container mb-4 mt-4">
         <h1>Encargue su cuadro personalizado</h1>
         <form id="myForm">
           <div class="form-group">
             <label for="nombre">Nombres:</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" oninput="validarLetras(this)">
+            <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Ingrese su nombre" oninput="validarLetras(this)">
           </div>
           <div class="form-group">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" oninput="validarLetras(this)">
+            <input type="text" class="form-control" id="apellido" name="apellido" required placeholder="Ingrese su apellido" oninput="validarLetras(this)">
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+            <input type="email" class="form-control" id="email" name="email" required placeholder="Ingrese su email">
           </div>
           <div class="form-group">
             <label for="direccion">Dirección</label>
-            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su Dirección">
+            <input type="text" class="form-control" id="direccion" name="direccion" required placeholder="Ingrese su Dirección">
           </div>
             <div class="form-group col-6 row">
             <label for="CodigoPostal">Codigo Postal</label>
-            <input type="text" class="form-control" id="CodigoPostal" placeholder="Ingrese su codigo postal">
+            <input type="text" class="form-control" id="CodigoPostal" name="CodigoPostal" required placeholder="Ingrese su codigo postal">
           </div>        
           <div class="form-group">
             <p>Orientación del cuadro:</p>          
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1">
+              <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" required>
               <label class="form-check-label" for="opcion1">
                 Individual
               </label>
             </div>         
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2">
+              <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2" required>
               <label class="form-check-label" for="opcion2">
                 Horizontal
               </label>
             </div>         
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="opciones" id="opcion3" value="opcion3">
+              <input class="form-check-input" type="radio" name="opciones" id="opcion3" value="opcion3" required>
               <label class="form-check-label" for="opcion3">
                 Vertical
               </label>
@@ -66,25 +66,25 @@
           <div class="form-group">
             <p>Medidas:</p>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="medidas" id="medida2" value="medida2">
-              <label class="form-check-label" for="medida2">
+              <input class="form-check-input" type="radio" name="medidas" id="medida1" value="medida1" required>
+              <label class="form-check-label" for="medida1">
                 90cm x 60cm
               </label>
             </div>                  
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="medidas" id="medida1" value="medida1">
-              <label class="form-check-label" for="medida1">
+              <input class="form-check-input" type="radio" name="medidas" id="medida2" value="medida2" required>
+              <label class="form-check-label" for="medida2">
                 75cm x 70cm
               </label>
             </div>          
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="medidas" id="medida3" value="medida3">
+              <input class="form-check-input" type="radio" name="medidas" id="medida3" value="medida3" required>
               <label class="form-check-label" for="medida3">
                 100cm x 70cm
               </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="medidas" id="medida4" value="medida4">
+                <input class="form-check-input" type="radio" name="medidas" id="medida4" value="medida4" required>
                 <label class="form-check-label" for="medida4">
                   150cm x 70cm
                 </label>
@@ -93,7 +93,7 @@
 
           <div class="form-group">
             <label for="imagen">Imagen:</label>
-            <input type="file" class="form-control-file" id="imagen" accept="image/*">
+            <input type="file" class="form-control-file" id="imagen" accept="image/*" required>
             <img id="preview" src="#" alt="Imagen previa" style="display: none; max-width: 100px; margin-top: 50px;">
           </div>
           <button type="submit" class="btn btn-primary">Enviar</button>
@@ -130,34 +130,64 @@
         });
       </script>
 
-<script>
+      <script>
 
-  // Agregar un evento para verificar la extensión del archivo cuando se envía el formulario
-document.getElementById('myForm').addEventListener('submit', function(event) {
-const file = document.getElementById('imagen');
-const selectedFile = file.files[0];
+          // Agregar un evento para verificar la extensión del archivo cuando se envía el formulario
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+        const file = document.getElementById('imagen');
+        const selectedFile = file.files[0];
 
-if (selectedFile) {
- const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i; // Extensiones permitidas
+        if (selectedFile) {
+        const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i; // Extensiones permitidas
 
- if (!allowedExtensions.exec(selectedFile.name)) {
-   // Archivo no es una imagen permitida
-   alert('Por favor, selecciona un archivo de imagen válido (JPEG, JPG, PNG o GIF).');
-   event.preventDefault(); // Evitar que se envíe el formulario
- }
-}
-});
+        if (!allowedExtensions.exec(selectedFile.name)) {
+          // Archivo no es una imagen permitida
+          alert('Por favor, selecciona un archivo de imagen válido (JPEG, JPG, PNG o GIF).');
+          event.preventDefault(); // Evitar que se envíe el formulario
+        }
+        }
+        });
 
-</script>
+      </script>
 
       <!--Script para que al apretar el boton borrar todo se borre todo lo seleccionado o escrito-->
-    <script>
-    function reiniciarFormulario() {
-      // Obtener el formulario y llamar a la función reset() para reiniciarlo
-      const formulario = document.getElementById('myForm');
-      formulario.reset();
-    }
-    </script>
+      <script>
+      function reiniciarFormulario() {
+        // Obtener el formulario y llamar a la función reset() para reiniciarlo
+        const formulario = document.getElementById('myForm');
+        formulario.reset();
+      }
+      </script>
+
+      <!--// Script para habilitar la medida que corresponda a la opcion seleccionada-->
+      <script>
+
+        document.querySelectorAll('input[name="opciones"]').forEach(function(radio) {
+          radio.addEventListener('change', function() {
+
+            document.querySelectorAll('input[name="medidas"]').forEach(function(medida) {
+              medida.disabled = true;
+            });
+
+            // Script para habilitar la medida que corresponda a la opcion seleccionada
+            var medidaAsociada = this.value.replace("opcion1", "medida1");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+            var medidaAsociada = this.value.replace("opcion2", "medida2");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+            var medidaAsociada = this.value.replace("opcion2", "medida3");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+            var medidaAsociada = this.value.replace("opcion2", "medida4");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+            var medidaAsociada = this.value.replace("opcion3", "medida2");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+            var medidaAsociada = this.value.replace("opcion3", "medida3");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+            var medidaAsociada = this.value.replace("opcion3", "medida4");
+            document.querySelector('input[value="' + medidaAsociada + '"]').disabled = false;
+          });
+        });
+
+      </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
