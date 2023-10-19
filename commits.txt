@@ -5,3 +5,5 @@ Miguel
 
 2) Tuve que borrar la carpeta "measure" por que no me dejaba vincular las imagenes ni
 los enlaces
+
+animate__fadeIn
