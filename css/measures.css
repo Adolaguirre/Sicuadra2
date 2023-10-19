@@ -38,26 +38,212 @@ header .logotipo{
     width: 12%;
 }
 
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(0, 174, 255) 
+}
+
+
+/* ////// @MEDIA //////// */
+
+@media (min-width: 720px){
+
+    header{
+        /* position: fixed; */
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction:row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+/* FOOTER */
+
 footer{
     background-color: rgb(230,230,230);
 }
 
 footer p{
     margin: 0;
-    padding: 12px;
+    padding: 20px;
     color: rgb(100,100,100);
 }
 
-footer .container{
-    height: 150px;
+.container p{
+    font-weight: bold;
+    
+    height: 15px;
     display: flex;
     justify-content: center;
     align-items: flex-end;  
 }
 
+
+body{
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+/* //////// HORIZONTAL ///////// */
+
+.container-slider{
+    margin: auto;
+    /* background-color: white; */
+    width: 950px;
+    padding: 30px;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* caja bca */
+
+ul.slider{
+    position:relative;
+    width: 800px;
+    height: 650px;
+
+}
+
+ul.slider li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    /* background-color: white; */
+    transition: opacity .5s;
+
+}
+/* img contenido */
+
+ul.slider li img{
+    margin-top: 5px;
+    padding-left:5%;
+    align-items: center;
+    width: 110%;
+    height: 105%;
+    object-fit: cover;
+}
+
+ul.slider li:first-child{
+    opacity:1;
+
+}
+
+ul.slider li:target{
+    opacity: 1;
+}
+
+.menu{
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+
+}
+
+.menu li a{
+    font-weight: bold;
+    display:inline-table;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    margin-top: 60px;
+    padding: 30px;
+    width: 10px;
+    height: 10px;
+    font-size: 15px;
+    border-radius: 15%;
+}
+
+
 /* Configuracion del carrusel (Hay que corregirlo) */
 
-.carrousel{
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+
+}
+
+.slider-box{
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+}
+
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 200%;
+    animation:  20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+
+}
+
+.texto{
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 250px;
+    color: #ffffff;
+}
+.texto h2{
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.slider-box img{
+    width: 100%;
+} */
+
+
+
+
+/* .carrousel{
     width: 100%;
     height:100%;
     align-items:center ;
@@ -124,4 +310,4 @@ footer .container{
 
 .itemCarrouselArrows > a > i{
     color: black;
-}
+} */
