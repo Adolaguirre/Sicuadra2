@@ -68,6 +68,7 @@ header a:hover{
     }
 
     header .container{
+        
         flex-direction: row;
         justify-content: space-between;
     }
@@ -77,6 +78,8 @@ header a:hover{
         padding-bottom: 0;
         padding-right: 20px;
     }
+
+}
 
 /* FOOTER */
 
@@ -107,12 +110,19 @@ body{
 
 /* //////// HORIZONTAL ///////// */
 
-.container-slider{
-    margin: auto;
-    /* background-color: white; */
-    width: 950px;
-    padding: 30px;
+@media (min-width: 720px){
+
+    .container-slider{
+        display: flex;
+        margin: auto;
+        /* background-color: white; */
+        width: 950px;
+        padding: 30px;
+    }
+
 }
+
+
 
 ul, li{
     margin: 0;
@@ -311,4 +321,4 @@ body{
 
 .itemCarrouselArrows > a > i{
     color: black;
-} */
+} *
