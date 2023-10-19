@@ -152,7 +152,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/triptico-cropped.jpg");
+    , url("triptico-cropped.jpg");
 }
 
 .carta:nth-child(2){
@@ -299,7 +299,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/triptico-cropped.jpg");
+        ,url("img/horizontal-cropped.jpg");
     }
     
     .carta:nth-child(2){
@@ -308,7 +308,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/individual-cropped.jpg");
+        ,url("img/triptico-cropped.jpg");
     }
     
     .carta:nth-child(3){
@@ -317,7 +317,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/horizontal-cropped.jpg");
+        ,url("img/individual-cropped.jpg");
     }
 
 }
