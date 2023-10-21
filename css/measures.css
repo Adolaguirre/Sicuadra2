@@ -196,11 +196,14 @@ ul.slider li:target{
 
 /* Configuracion del carrusel (Hay que corregirlo) */
 
+
 /* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+comentario de prueba 
 
 body{
     background-color: #f5f5f5;
