@@ -226,6 +226,12 @@ footer .container{
         width: 100%;
     }
 
+    .logotipo{
+        position: absolute;
+        width: 30%;
+        height: 30%;
+    }
+
     header .container{
         flex-direction: row;
         justify-content: space-between;
