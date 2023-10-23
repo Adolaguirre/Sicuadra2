@@ -177,3 +177,22 @@ footer .container{
     color: white;
 }
 
+@media (max-width: 720px){
+    .carrousel{
+        position:relative;
+        left: 0%;
+        width: 100%;
+    }
+    
+    .conteCarrousel{
+        width: 400;
+        height: 400;
+        overflow: hidden;
+        image-resolution: 400;
+    }
+
+    .conteCarrousel img{
+        width: 400px;
+        height: 400px;
+    }
+}
