@@ -221,10 +221,10 @@ footer .container{
     align-items: flex-end;  
 }
 
-@media (min-width: 720px){
+@media (max-width: 720px){
 
     header{
-        position: fixed;
+        position: relative;
         width: 100%;
     }
 
@@ -276,6 +276,9 @@ footer .container{
     #nuestros-estilos .programas{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+
+
         /* modificar */
     }
 
@@ -294,6 +297,7 @@ footer .container{
         background-repeat: no-repeat;
         background-position-y: 0;
         background-color: rgba(50,50,50,0.5);
+
         
     }
 
