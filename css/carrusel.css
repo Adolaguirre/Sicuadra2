@@ -108,8 +108,9 @@ footer .container{
 /* Carrusel */
 
 .carrousel{
-    width: 70%;
-    justify-content:center;
+    position:relative;
+    left: 20%;
+    width: 80%;
 }
 
 .conteCarrousel{
